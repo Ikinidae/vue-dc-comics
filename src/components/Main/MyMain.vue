@@ -1,21 +1,25 @@
 <template>
-    <div>
-        <h1>Main</h1>
-        <MyContent/>
+    <div id="content">
+        <h1>Content goes here</h1>
     </div>
 </template>
 
 <script>
-import MyContent from './components/Main/MyContent.vue'
-
 export default {
-  name: 'MyMain',
-  components: {
-    MyContent
-  }
+  name: 'MyMain'
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+  #content {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
 
+    h1 {
+      color: white;
+    }
+  }
 </style>
