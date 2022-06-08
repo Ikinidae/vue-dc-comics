@@ -11,8 +11,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  * {
+    background-image: url(../../assets/footer-bg.jpg);
+  }
+
   #footer {
-    background-color: gray;
+    // background-color: gray;
     padding-left: 10%;
     padding-right: 10%;
   }

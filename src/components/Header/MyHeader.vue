@@ -2,7 +2,7 @@
     <div id="header">
       <!-- logo a sx -->
       <div>
-        <img src="src/assets/dc-logo.png" alt="">
+        <img src="../../assets/dc-logo.png" alt="">
       </div>
 
       <!-- nav a dx -->
@@ -33,8 +33,9 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 10%;
     padding-right: 10%;
 
@@ -44,7 +45,7 @@ export default {
       margin-right: 10px;
 
       &:hover {
-        
+        color: #0282f9;
       }
     }
   }
