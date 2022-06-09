@@ -6,9 +6,10 @@
 
     <!-- blocco fumetti -->
     <div id="content">
-      <MyComics v-for="(comic, i) in comics" :key="i"
-       :details="comic"
-      />
+      <div class="comix">
+        <MyComics v-for="(comic, i) in comics" :key="i" :details="comic" />
+      </div>
+
 
       <!-- <div class="comic" v-for="(comic, i) in comics" :key="i">
         <img :src="comic.thumb" :alt="comic.series">
@@ -34,7 +35,7 @@ export default {
   components: {
     MyComics
   },
-    data() {
+  data() {
     return {
       products: [
         {
@@ -151,9 +152,15 @@ export default {
   padding-bottom: 30px;
   padding-left: 10%;
   padding-right: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+  margin: 0 auto;
+
+
+  .comix {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
 }
 
 #products {
