@@ -1,37 +1,50 @@
 <template>
   <div>
+    <!-- blocco fumetti -->
     <div id="content">
         <h1>Content goes here</h1>
     </div>
+
+    <!-- riga blu -->
     <div id="products">
-      <a href="">
-        <img src="../../assets/buy-comics-digital-comics.png" alt="">
-        <span>DIGITAL COMICS</span>
-      </a>
-      <a href="">
-        <img src="../../assets/buy-comics-merchandise.png" alt="">
-        <span>DC MERCHANDISE</span>
-      </a>
-      <a href="">
-        <img src="../../assets/buy-comics-subscriptions.png" alt="">
-        <span>SUBSCRIPTION</span>
-      </a>
-      <a href="">
-        <img id="shop_locator_img" src="../../assets/buy-comics-shop-locator.png" alt="">
-        <span>COMIC SHOP LOCATOR</span>
-      </a>
-      <a href="">
-        <img src="../../assets/buy-dc-power-visa.svg" alt="">
-        <span>DC POWER VISA</span>
+      <a href="" v-for="(product, i) in products" :key="i">
+        <img :src="product.img" alt="">
+        <span>{{product.name}}</span>
       </a>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'MyMain'
-}
+  export default {
+    name: 'MyMain',
+    data () {
+      return {
+        products : [
+          {
+            img : require("../../assets/buy-comics-digital-comics.png"),
+            name : "DIGITAL COMICS"
+          },
+          {
+            img : require("../../assets/buy-comics-merchandise.png"),
+            name : "DC MERCHANDISE"
+          },
+          {
+            img : require("../../assets/buy-comics-subscriptions.png"),
+            name : "SUBSCRIPTION"
+          },
+          {
+            img : require("../../assets/buy-comics-shop-locator.png"),
+            name : "COMIC SHOP LOCATOR"
+          },
+          {
+            img : require("../../assets/buy-dc-power-visa.svg"),
+            name : "DC POWER VISA"
+          }
+        ]
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
@@ -71,10 +84,6 @@ export default {
 
       span {
         color: white;
-      }
-
-      #shop_locator_img {
-        width: 35px;
       }
     }
   }
